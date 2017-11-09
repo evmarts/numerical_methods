@@ -17,6 +17,7 @@ plot([p p],[y_lb, y_ub],'--black');
 plot([a a],[y_lb, y_ub],'blue');plot([b b],[-1, 1],'red');
 
 % call bisection
+pause(20);
 root_est = bisection(a,b,min_diff);
 
 %% bisect performs the bisection method on interval [a,b] until min_diff
@@ -26,7 +27,7 @@ root_est = bisection(a,b,min_diff);
 function root_est = bisection(a,b,min_diff) 
     conv_criteria = false; % convergence criteria false until min_diff
     p_prev = b;            % arbitrarily set p_prev to b
-    wait = 0.5/2;
+    wait = 1/2;
     
     while (conv_criteria == false)
         p = (a+b)/2;  % compute new midpoint p

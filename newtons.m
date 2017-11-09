@@ -29,6 +29,7 @@ function root_est = newton(x_prev, min_diff)
         if abs(x_prev - x_k) < min_diff
                 conv_criteria = true; % criteria met
                 root_est = x_k;
+                plot(root_est   , 0        , '*green');pause(wait)
                 title("f(x) = e^x - 1/2 = 0 at x = " + root_est);
         end
   
